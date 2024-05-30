@@ -1,0 +1,133 @@
+/******************************************************************************
+
+Fazer um cardapio digital
+> opção do cardapio virtual
+> cafe da manha, almoço e jantar
+> cada opção precisa ter 3 condições
+> precisa aparecer o valor da opção selecionada
+
+*******************************************************************************/
+
+#include <stdio.h>
+#include <locale.h>
+
+int main()
+{int login, opc, op1, op2, op3;
+    
+    setlocale(LC_ALL,"Portuguese");
+    
+    printf("<<<<<<<<<<<<<<<<<<<<<<<<< Restaurante Gogo da Ema >>>>>>>>>>>>>>>>>>>>>>>>>\n\n");
+    
+    printf("Digite uma das opções correspondentes:\n\n[1] - Entrar no cardapio virtual\n[2] - Sair\n\nR: ");
+    scanf("%d", &login);
+    
+    switch(login){
+        case 1:
+        printf("Informe a opção do seu cardapio:\n\n[1] - Café da manhã\n[2] - Almoço\n[3] - Janta\n");
+        scanf("%d", &opc);
+        
+        switch(opc){
+            case 1:
+            printf("=========================  Café da manhã  =========================\n\n");
+            
+            printf("Digite a opção do seu café da manhã correspondente:\n");
+            printf("[1] - Pão de queijo com suco de frutas naturais.\n");
+            printf("[2] - Tapioca recheada com queijo e tomate.\n");
+            printf("[3] - Sanduíche integral de peito de peru, queijo e vegetais.\n");
+            
+            scanf("%d", &op1);
+            switch(op1){
+                case 1:
+                printf("Compareça ao balcão e resgate o seu Pão de queijo com suco de frutas naturais\n");
+                break;
+                
+                case 2:
+                printf("Compareça ao balcão e resgate a sua Tapioca recheada com queijo e tomate\n");
+                break;
+                
+                case 3:
+                printf("Compareça ao balcão e resgate o seu Sanduíche integral de peito de peru, queijo e vegetais\n");
+                break;
+                
+                default:
+                printf("Opção invalida");
+                
+            }
+            
+            break;
+            
+            case 2:
+            printf("=========================  Almoço  =========================\n\n");
+            
+            printf("Digite a opção do seu almoço correspondente:\n");
+            printf("[1] - Frango grelhado com legumes assados.\n");
+            printf("[2] - Peixe assado com batata-doce e brócolis.\n");
+            printf("[3] - Torta de frango com salada.\n");
+            
+            scanf("%d", &op2);
+            
+            switch(op2){
+                case 1:
+                printf("Compareça ao balcão e resgate o seu Frango grelhado com legumes assados\n");
+                break;
+                
+                case 2:
+                printf("Compareça ao balcão e resgate o seu Peixe assado com batata-doce e brócolis\n");
+                break;
+                
+                case 3:
+                printf("Compareça ao balcão e resgate o seu Torta de frango com salada\n");
+                break;
+                
+                default:
+                printf("Opção invalida");
+                
+            }
+            
+            break;
+            
+            case 3:
+            printf("=========================  Jantar  =========================\n\n");
+            
+            printf("Digite a opção do seu jantar correspondente:\n");
+            printf("[1] - Macarrão integral com molho de tomate e almôndegas de carne.\n");
+            printf("[2] - Omelete de vegetais com salada.\n");
+            printf("[3] - Peito de frango grelhado com legumes.\n");
+            
+            scanf("%d", &op3);
+            
+            switch(op3){
+                case 1:
+                printf("Compareça ao balcão e resgate o seu Macarrão integral com molho de tomate e almôndegas de carne\n");
+                break;
+                
+                case 2:
+                printf("Compareça ao balcão e resgate o seu Omelete de vegetais com salada\n");
+                break;
+                
+                case 3:
+                printf("Compareça ao balcão e resgate o seu Peito de frango grelhado com legumes\n");
+                break;
+                
+                default:
+                printf("Opção invalida");
+                
+            }
+            
+            break;
+            
+            default:
+            printf("Opção invalida");
+        }
+        
+        
+        case 2:
+        printf("Você saiu do cardapio...");
+        break;
+        
+        default:
+        printf("Opção invalida");
+    }
+    
+    return 0;
+}
