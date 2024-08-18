@@ -1,0 +1,62 @@
+'''
+
+Atividade 01 - 12/03/2024
+
+Mostrar próxima segunda-feira, 19/08/2024
+
+Fazer dois programas para cadastrar dados pessoais da pessoa:
+Altura, Nome, Peso e Idade
+Utilizando C e Python
+
+'''
+
+print("=====Insira os dados correspondentes=====")
+
+nome = str(input("Digite seu nome: "))
+idade = int(input("Digite sua idade: "))
+peso = float(input("Digite o seu peso(Kilos): "))
+altura = float(input("Digite sua altura(Metros): "))
+
+print("Seu  nome é {}, você tem {} anos, você pesa {} Kilos e tem {} de altura".format(nome, idade, peso, altura))
+
+
+/******************************************************************************
+
+Atividade 01 - 12/03/2024
+
+Mostrar próxima segunda-feira, 19/08/2024
+
+Fazer dois programas para cadastrar dados pessoais da pessoa:
+Altura,Nome ,Peso e Idade
+Utilizando C e Python
+
+*******************************************************************************/
+#include <stdio.h>
+
+int main()
+{
+    char nome[50];
+    int idade;
+    float peso, altura;
+    
+    printf("=====Insira os dados correspondentes=====\n\n");
+    
+    
+    
+    printf("Digite seu nome: ");
+    fgets( nome , 50 ,  stdin );
+    fflush(stdin);
+    
+    printf("Digite sua idade: ");
+    scanf("%d", &idade);
+    
+    printf("Digite o seu peso(Kilos): ");
+    scanf("%f", &peso);
+    
+    printf("Digite sua altura(Metros): ");
+    scanf("%f", &altura);
+    
+    printf("Seu nome é %s, você tem %d anos, pesa %f kilos e tem %f de altura", nome, idade, peso, altura);
+
+    return 0;
+}
